@@ -10,10 +10,10 @@ export default function Blog() {
       <Heading>Blog</Heading>
       <div>
         {posts.map((post) => (
-          <div key={post._raw.flattenedPath} className="mb-8">
-            <Link href={`/blog/${post._raw.flattenedPath}`}>
-              <h2 className="text-2xl">{post.title}</h2>
-              <p>{format(parseISO(post.publishedAt), 'MMMM dd, yyyy')}</p>
+          <div key={post._raw.flattenedPath} className="mb-8 border-l-2 border-copper/30 pl-4 transition-colors hover:border-copper">
+            <Link href={`/blog/${post._raw.flattenedPath}`} className="no-underline">
+              <h2 className="text-2xl text-bone hover:text-copper transition-colors">{post.title}</h2>
+              <p className="text-bone-muted">{format(parseISO(post.publishedAt), 'MMMM dd, yyyy')}</p>
             </Link>
           </div>
         ))}

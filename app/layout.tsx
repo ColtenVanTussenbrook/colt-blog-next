@@ -1,11 +1,14 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/react';
-import { Roboto_Slab } from 'next/font/google';
+import { DM_Sans } from 'next/font/google';
 import Navbar from './components/navbar';
 import SocialIcons from './components/social-icons';
 
-const robotoSlab = Roboto_Slab({ subsets: ['latin'] });
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  weight: '600'
+});
 
 export const metadata: Metadata = {
   title: 'Colten Van Tussenbrook Portfolio',
@@ -15,8 +18,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={robotoSlab.className}>
-        <div className="px-12 py-6 lg:px-72 lg:py-24 flex flex-col gap-8">
+      <body className={`${dmSans.className} bg-ink text-bone`}>
+        <div className="relative px-12 py-6 lg:px-72 lg:py-24 flex flex-col gap-8">
           <Navbar />
           {children}
           <SocialIcons />

@@ -3,25 +3,79 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --copper: #b87333;
+  --ink: #0a0908;
+  --bone: #efe8dd;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  background-color: var(--ink);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--bone);
+  background-color: var(--ink);
+  min-height: 100vh;
+}
+
+::selection {
+  background-color: var(--copper);
+  color: var(--ink);
+}
+
+a {
+  color: var(--copper);
+  text-decoration-color: rgba(184, 115, 51, 0.4);
+  text-underline-offset: 3px;
+  transition: filter 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+a:hover {
+  filter: brightness(1.3);
+  text-decoration-color: var(--copper);
+}
+
+main a {
+  text-decoration-line: underline;
+}
+
+main p {
+  line-height: 1.75;
+  color: var(--bone);
+}
+
+main h2 {
+  font-size: 1.563rem;
+  color: var(--copper);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+main ul,
+main ol {
+  margin-left: 1.5rem;
+  line-height: 1.75;
+}
+
+main ul {
+  list-style-type: disc;
+}
+
+main ol {
+  list-style-type: decimal;
+}
+
+main blockquote {
+  border-left: 2px solid var(--copper);
+  padding-left: 1rem;
+  color: #a89e91;
+  font-style: italic;
+}
+
+main code {
+  background-color: #211d19;
+  color: var(--copper);
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.9em;
 }

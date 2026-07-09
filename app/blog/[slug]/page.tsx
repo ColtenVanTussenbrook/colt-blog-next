@@ -25,9 +25,15 @@ export default async function Page({ params }: { params: { slug: string } }) {
     <div>
       <Heading>{post.title}</Heading>
       <MDXContent />
-      <Link href="/blog" className="flex mt-8">
-        <Image src={backArrow} alt="back arrow icon" width={34} className="pr-2" />
-        <p className="underline">Back to blog</p>
+      <Link href="/blog" className="flex items-center mt-8 no-underline group">
+        <Image
+          src={backArrow}
+          alt="back arrow icon"
+          width={28}
+          className="pr-2 opacity-70 transition-opacity group-hover:opacity-100"
+          style={{ filter: 'invert(46%) sepia(60%) saturate(1000%) hue-rotate(345deg) brightness(95%)' }}
+        />
+        <p className="text-copper underline group-hover:brightness-125 transition-[filter]">Back to blog</p>
       </Link>
     </div>
   );

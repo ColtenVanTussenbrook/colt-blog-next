@@ -9,30 +9,32 @@ export default function About() {
       <div className="md:flex">
         <div className="flex-1 mr-0 md:mr-8 mb-8 md:mb-0">
           <p>
-            Hey, I’m Colten. I’m a software engineer living in the Salt Lake City, UT. I’m currently a senior full stack engineer at{' '}
-            <a href="https://blackriflecoffee.com" target="_blank">
-              Black Rifle Coffee Company
-            </a>
-            .
+            Hey, I’m Colten.
+          </p>
+          <br />
+          <p></p>
+          <p>
+            Though I've spent most of my career as a developer, I've recently started to shift more towards product. I like to code, but I've found I like working with people even more and collaborating with others to create awesome products.
           </p>
           <br />
           <p>
-            I have professional working experience with JavaScript, TypeScript, PHP, React, Next.js, WordPress, CSS and Ruby on Rails. I’m
-            always trying to learn more and I’m open to learning new frameworks and languages.
+            During my career, I've always prided myself on being a developer who can write good code but also be able to communicate across other teams and use those
+            skills to help businesses move forward. I majored in Technical Communication, which has helped me to bridge the gap between technology and business.
           </p>
           <br />
           <p>
-            I pride myself on being a developer who can write good code but also be able to communicate across other teams and use those
-            skills to help businesses move forward.
-          </p>
-          <br />
-          <p>
-            When I’m not coding, I enjoy CrossFit, fly fishing, snowboarding, backpacking and hanging out with my wife, little boy, and dog.
+            When I’m not coding, I enjoy trail running, fly fishing, snowboarding, backpacking and hanging out with my family - ideally doing all of those things <i>with</i> them.
             If you’d like to reach out, you can contact me at coltenvantussenbrook@gmail.com, or through the social links below.
           </p>
         </div>
         <div>
-          <Image src={portrait} alt="photo of Colten Van Tussenbrook" width={300} height={300} />
+          <Image
+            src={portrait}
+            alt="photo of Colten Van Tussenbrook"
+            width={300}
+            height={300}
+            className="rounded-lg shadow-[0_0_30px_-8px_rgba(184,115,51,0.6)]"
+          />
         </div>
       </div>
     </main>
